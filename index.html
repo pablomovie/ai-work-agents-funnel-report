@@ -1,32 +1,32 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="color-scheme" content="light dark"><meta name="robots" content="noindex"><style>img{max-width:100%}body{margin:0}</style><title>AI Work Agents Funnel Report</title>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="color-scheme" content="light dark"><meta name="robots" content="noindex"><style>img{max-width:100%}body{margin:0}</style><title>Speechify Work Funnel Case Study</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 :root{
-  --paper:#F4F5F7; --paper-2:#FFFFFF; --ink:#15181D; --ink-2:#4A5160; --ink-3:#7C8494;
-  --line:#D9DDE3; --line-2:#E9ECF0;
-  --accent:#0E7C66; --accent-ink:#0B5F4F; --accent-soft:#DDF0EA;
-  --dead:#B3392B; --dead-soft:#F6E3DF;
-  --chip:#EEF0F3;
-  --shadow:0 1px 2px rgba(21,24,29,.06), 0 8px 24px -12px rgba(21,24,29,.18);
+--paper:#F4F5F7; --paper-2:#FFFFFF; --ink:#15181D; --ink-2:#4A5160; --ink-3:#7C8494;
+--line:#D9DDE3; --line-2:#E9ECF0;
+--accent:#0E7C66; --accent-ink:#0B5F4F; --accent-soft:#DDF0EA;
+--dead:#B3392B; --dead-soft:#F6E3DF;
+--chip:#EEF0F3;
+--shadow:0 1px 2px rgba(21,24,29,.06), 0 8px 24px -12px rgba(21,24,29,.18);
 }
 @media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --paper:#111418; --paper-2:#181C22; --ink:#ECEEF1; --ink-2:#B6BCC7; --ink-3:#8790A0;
-    --line:#2A3039; --line-2:#222831;
-    --accent:#3DBA9C; --accent-ink:#7ED9C1; --accent-soft:#12312A;
-    --dead:#E0715F; --dead-soft:#3A1F1B;
-    --chip:#222831;
-    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
-  }
+:root:not([data-theme="light"]){
+--paper:#111418; --paper-2:#181C22; --ink:#ECEEF1; --ink-2:#B6BCC7; --ink-3:#8790A0;
+--line:#2A3039; --line-2:#222831;
+--accent:#3DBA9C; --accent-ink:#7ED9C1; --accent-soft:#12312A;
+--dead:#E0715F; --dead-soft:#3A1F1B;
+--chip:#222831;
+--shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+}
 }
 :root[data-theme="dark"]{
-  --paper:#111418; --paper-2:#181C22; --ink:#ECEEF1; --ink-2:#B6BCC7; --ink-3:#8790A0;
-  --line:#2A3039; --line-2:#222831;
-  --accent:#3DBA9C; --accent-ink:#7ED9C1; --accent-soft:#12312A;
-  --dead:#E0715F; --dead-soft:#3A1F1B;
-  --chip:#222831;
-  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+--paper:#111418; --paper-2:#181C22; --ink:#ECEEF1; --ink-2:#B6BCC7; --ink-3:#8790A0;
+--line:#2A3039; --line-2:#222831;
+--accent:#3DBA9C; --accent-ink:#7ED9C1; --accent-soft:#12312A;
+--dead:#E0715F; --dead-soft:#3A1F1B;
+--chip:#222831;
+--shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
 }
 *{box-sizing:border-box}
 body{background:var(--paper);color:var(--ink);font-family:"IBM Plex Sans",system-ui,-apple-system,Segoe UI,sans-serif;font-size:17px;line-height:1.6;padding-inline:16px;padding-block:0 64px}
@@ -100,50 +100,75 @@ td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
 .dead-grid i{display:block;aspect-ratio:1;border-radius:2px;background:var(--dead-soft);border:1px solid color-mix(in srgb,var(--dead) 35%,transparent);cursor:default}
 .dead-grid i:hover{background:var(--dead)}
 .colnote{font-size:12.5px;color:var(--ink-3);margin:10px 0 0;max-width:none}
+
+.steps{margin:20px 0 22px;padding-left:0;list-style:none;counter-reset:s;display:grid;gap:12px}
+.steps li{counter-increment:s;position:relative;padding:14px 16px 14px 56px;background:var(--paper-2);border:1px solid var(--line);border-radius:8px;font-size:16px;line-height:1.5}
+.steps li::before{content:counter(s);position:absolute;left:16px;top:13px;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center}
+.steps li b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:17px;font-weight:700;margin-bottom:3px}
+.steps .pill{vertical-align:1px}
+.quote{margin:26px 0;padding:6px 0 6px 22px;border-left:3px solid var(--accent)}
+.quote p{font-family:"Bricolage Grotesque",sans-serif;font-size:clamp(19px,2.4vw,23px);font-weight:600;line-height:1.35;margin:0 0 8px;text-wrap:balance}
+.quote footer{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12.5px;color:var(--ink-3)}
+.cta{margin:30px 0 8px;padding:18px 20px;border-radius:10px;background:var(--accent-soft);border:1px solid color-mix(in srgb,var(--accent) 35%,transparent)}
+.cta p{margin:0;max-width:none;font-size:16px}
+.cta b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:18px;margin-bottom:4px;color:var(--ink)}
+.lede em{font-style:italic;color:var(--ink)}
 </style></head><body>
 
 <div class="wrap">
-  <p class="eyebrow">HookRadar industry report · AI agents for work · Meta Ads Library</p>
-  <h1>AI Work Agents Marketing in 2026: What Perplexity Computer, Manus, Lindy &amp; Sintra's Landing Pages Reveal That Their Ads Don't</h1>
-  <div class="byline"><span>September 22, 2026</span><span>14 min read</span><span>Data snapshot: September 21, 2026</span><span>Speechify Work growth team, via HookRadar</span></div>
+<p class="eyebrow">Case study · Speechify Work × HookRadar · AI agents for work</p>
+<h1>How Speechify Work uses competitor funnels to kill product hypotheses before writing code</h1>
+<div class="byline"><span>September 22, 2026</span><span>14 min read</span><span>Data snapshot: September 21, 2026</span><span>Written by the Speechify Work growth team</span></div>
 
-  <p class="lede">Every week, HookRadar analyzes paid ads, landing pages, official social posts and organic trends to uncover the creative patterns driving growth across fast-moving markets.</p>
-  <p class="lede">This report focuses on AI agents for work, but the real story is not about hooks. It is about what happens one click later. Four brands, 18,183 Meta ads and 323 distinct destination URLs later, the landing pages tell a much more honest story than the creatives do: <strong>which ideas a competitor is still paying for, and which ones it has already buried.</strong></p>
+<p class="lede">A product team always has more ideas than capacity. So product strategy is not only about finding what to build. It is about continuously discarding what should not be built, before design, engineering and marketing time goes into it.</p>
+<p class="lede">Competitor analysis is usually done at the surface: which creatives a rival runs, which messages it tests, which features it pushes. That surface can send the wrong signal. A team sees a competitor advertising a new use case and concludes: <em>"They found something. Their ad is just weak. We can do it better."</em> Without the funnel behind the ad, that conclusion is a guess.</p>
+<p class="lede">With HookRadar we look one click further: where the ad sends people, which landing page or onboarding flow continues the promise, and whether the brand is still paying for that page a month later. Four competitors, 18,183 Meta ads and 323 landing pages later, the funnels told us something the creatives never would: <strong>which ideas a competitor is still funding, and which it has already buried.</strong> That second list is where we save the most engineering time.</p>
 
-  <div class="kpis">
-    <div class="kpi"><b>18,183</b><span>Meta ads tracked across four brands</span></div>
-    <div class="kpi"><b>323</b><span>distinct landing-page destinations</span></div>
-    <div class="kpi dead"><b>92%</b><span>of Perplexity's 203 use-case pages no longer get ads</span></div>
-    <div class="kpi live"><b>6 of 6</b><span>sintra role pages still funded; 0 of 7 industry pages</span></div>
-  </div>
+<div class="kpis">
+<div class="kpi"><b>18,183</b><span>Meta ads tracked across four brands</span></div>
+<div class="kpi"><b>323</b><span>distinct landing-page destinations</span></div>
+<div class="kpi dead"><b>92%</b><span>of Perplexity's 203 use-case pages no longer get ads</span></div>
+<div class="kpi live"><b>6 of 6</b><span>sintra role pages still funded; 0 of 7 industry pages</span></div>
+</div>
 </div>
 
 <div class="wrap">
-  <h2>1. AI work agents: four brands, four different funnels hiding inside one category</h2>
-  <p>On the surface, Perplexity Computer, Manus, Lindy and sintra.ai sell the same promise: an AI that does the work instead of answering questions about it. One click past the ad, they are running four unrelated businesses.</p>
+<h2>How we run it: three buckets before a hypothesis reaches the roadmap</h2>
+<p>Our internal numbers stay internal, so this case study only uses what is observable in HookRadar. The process itself is simple and repeatable. Every product or positioning hypothesis that looks promising goes through the same check against competitor funnels before anyone opens Figma.</p>
+<ol class="steps">
+<li><b>Find who already tried it.</b> HookRadar's destination view lists every landing page a competitor has sent paid traffic to, with the number of ads behind each. We search it for the use case, the audience or the mechanic our hypothesis depends on.</li>
+<li><b>Check whether they are still paying for it.</b> The same view, filtered to active ads, shows which pages still receive spend today. A page with 300 ads behind it and zero live is a finished experiment someone else paid for.</li>
+<li><b>Sort into three buckets.</b> <span class="pill dead">Dead at two or more competitors</span> means the hypothesis is dropped or has to be reframed before it gets a brief. <span class="pill live">Live and crowded</span> means it is real demand but table stakes: we only pursue it with a differentiated angle. <span class="pill brand">Empty</span> means nobody runs it; those go first into a cheap creative test, not into development.</li>
+</ol>
+<blockquote class="quote"><p>"We stopped treating a competitor's ad as evidence that an idea works. The ad is a hypothesis. The landing page they are still paying for three months later is the result."</p><footer>Speechify Work growth team</footer></blockquote>
+<p>Below is what that check looked like for our own category in September 2026, the AI-agents-for-work market, where our four closest competitors are Perplexity Computer, Manus, Lindy and sintra.ai.</p>
+</div>
+<div class="wrap">
+<h2>1. AI work agents: four brands, four different funnels hiding inside one category</h2>
+<p>On the surface, Perplexity Computer, Manus, Lindy and sintra.ai sell the same promise: an AI that does the work instead of answering questions about it. One click past the ad, they are running four unrelated businesses.</p>
 </div>
 <div class="wide">
-  <div class="tablewrap"><table>
-    <tr><th>Brand</th><th>Meta ads</th><th>Destination URLs</th><th>Where the traffic goes</th><th>Funnels with live ads</th></tr>
-    <tr><td><span class="pill brand">Perplexity AI</span></td><td class="num">10,695</td><td class="num">271</td><td>203 use-case landing pages, 44 creator pages, 3 Zoom events, app deeplink</td><td class="num">19</td></tr>
-    <tr><td><span class="pill brand">sintra.ai</span></td><td class="num">4,552</td><td class="num">40</td><td>5 quiz funnels, 6 role pages, 7 industry pages, homepage, app stores</td><td class="num">11</td></tr>
-    <tr><td><span class="pill brand">Manus AI</span></td><td class="num">2,590</td><td class="num">5</td><td>App Store and Google Play (98% of ads)</td><td class="num">2</td></tr>
-    <tr><td><span class="pill brand">Lindy</span></td><td class="num">346</td><td class="num">7</td><td>lindy.ai, lindy.ai/go, a separate brand at meetingsai.com</td><td class="num">2</td></tr>
-  </table></div>
+<div class="tablewrap"><table>
+<tr><th>Brand</th><th>Meta ads</th><th>Destination URLs</th><th>Where the traffic goes</th><th>Funnels with live ads</th></tr>
+<tr><td><span class="pill brand">Perplexity AI</span></td><td class="num">10,695</td><td class="num">271</td><td>203 use-case landing pages, 44 creator pages, 3 Zoom events, app deeplink</td><td class="num">19</td></tr>
+<tr><td><span class="pill brand">sintra.ai</span></td><td class="num">4,552</td><td class="num">40</td><td>5 quiz funnels, 6 role pages, 7 industry pages, homepage, app stores</td><td class="num">11</td></tr>
+<tr><td><span class="pill brand">Manus AI</span></td><td class="num">2,590</td><td class="num">5</td><td>App Store and Google Play (98% of ads)</td><td class="num">2</td></tr>
+<tr><td><span class="pill brand">Lindy</span></td><td class="num">346</td><td class="num">7</td><td>lindy.ai, lindy.ai/go, a separate brand at meetingsai.com</td><td class="num">2</td></tr>
+</table></div>
 </div>
 <div class="wrap">
-  <p>Perplexity treats the landing page as the unit of testing. sintra treats the quiz as the unit of qualification. Manus treats the store listing as the whole funnel. Lindy tried to be two brands and went back to one.</p>
-  <p>The ad creatives alone would not tell you any of this. Perplexity's video hooks ("Here's how I saved $30,000 using AI", "19 AI models running at the same time") look like a brand campaign. The destination data shows a factory: 203 separate pages, each promising one finished deliverable for one trade or job.</p>
+<p>Perplexity treats the landing page as the unit of testing. sintra treats the quiz as the unit of qualification. Manus treats the store listing as the whole funnel. Lindy tried to be two brands and went back to one.</p>
+<p>The ad creatives alone would not tell you any of this. Perplexity's video hooks ("Here's how I saved $30,000 using AI", "19 AI models running at the same time") look like a brand campaign. The destination data shows a factory: 203 separate pages, each promising one finished deliverable for one trade or job.</p>
 </div>
 
 <div class="wrap">
-  <h2>2. One strong direction: Perplexity turns every trade into its own landing page, then kills 92% of them</h2>
-  <p>Perplexity has the cleanest funnel experiment in the dataset: name the trade, name the document, build a page for it. Since the first launch spike on April 17 (732 ads in one day), the brand has shipped 203 distinct use-case pages under one path. Twenty-nine of them sell an estimate or bid for a trade (roofing, HVAC, plumbing, fencing, concrete, painting, pool service). Thirty-eight sell an audit of a small business (law firm, yoga studio, vet practice, CPA firm, nail salon).</p>
-  <p><strong>The page is the hypothesis.</strong> Most pages got the same treatment: 95 of the 203 received exactly 30 to 49 ads, which reads as a templated test budget, not a bet. Only 9 pages ever crossed 100 ads.</p>
-  <p><strong>Then the cull.</strong> As of September 21, live ads point to 17 of the 203 pages.</p>
+<h2>2. One strong direction: Perplexity turns every trade into its own landing page, then kills 92% of them</h2>
+<p>Perplexity has the cleanest funnel experiment in the dataset: name the trade, name the document, build a page for it. Since the first launch spike on April 17 (732 ads in one day), the brand has shipped 203 distinct use-case pages under one path. Twenty-nine of them sell an estimate or bid for a trade (roofing, HVAC, plumbing, fencing, concrete, painting, pool service). Thirty-eight sell an audit of a small business (law firm, yoga studio, vet practice, CPA firm, nail salon).</p>
+<p><strong>The page is the hypothesis.</strong> Most pages got the same treatment: 95 of the 203 received exactly 30 to 49 ads, which reads as a templated test budget, not a bet. Only 9 pages ever crossed 100 ads.</p>
+<p><strong>Then the cull.</strong> As of September 21, live ads point to 17 of the 203 pages.</p>
 </div>
 <div class="wide">
-  <div class="survival">
+<div class="survival">
 <h4>Perplexity built 203 use-case landing pages since April 17. On September 21, ads still point to 17 of them.</h4>
 <p class="sub">Each page sells one finished deliverable for one trade or job (roofing estimate, CPA firm audit, job applications). Hover a square for the page name and how many ads it received.</p>
 <div class="ratio" aria-label="17 live of 203"><i class="a" style="width:8.4%"></i></div>
@@ -155,134 +180,135 @@ td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
 </div>
 <div class="wrap"><p class="caption">Perplexity's landing-page factory after five months. The survivors cluster in two verticals (construction, real estate) and three broad jobs (job search, SEO and marketing, finding money).</p></div>
 <div class="wide">
-  <div class="strip">
-    <div class="card"><div class="img"><img src="img/be793c2336b1e07fa3a4949cd9ae7c9d.jpg" alt="Perplexity construction estimate ad"><span class="pill brand fmt">VIDEO</span><span class="pill live st">live · 42 d</span></div><div class="body"><p class="hook">"Blueprints in. Bid-ready estimates out."</p><p class="meta"><b>Perplexity</b> → /gen/computer/construction-estimate<br>Upload your blueprints. Computer builds a bid-ready Excel estimate.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/109760398882363/ads/6a7d65d6a166b5d7f1ae0d6f?page_id=109760398882363">Open in HookRadar</a></div></div>
-    <div class="card"><div class="img"><img src="img/58d74f55ca5e839ce6ad8c4a6b13db76.jpg" alt="Perplexity RFI tracking ad"><span class="pill brand fmt">IMAGE</span><span class="pill live st">live · 5 d</span></div><div class="body"><p class="hook">"Draft and track RFIs"</p><p class="meta"><b>Perplexity</b> → /gen/computer-base-construction<br>Second construction page, launched September 16. The vertical is being deepened, not replaced.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/109760398882363/ads/6aae2e252e3fe9c4253e9cb1?page_id=109760398882363">Open in HookRadar</a></div></div>
-    <div class="card"><div class="img"><img src="img/c6fa634ef7b2fd01b82105a0c6b6c1e4.jpg" alt="Perplexity real estate comps ad"><span class="pill brand fmt">IMAGE</span><span class="pill live st">live · 11 d</span></div><div class="body"><p class="hook">"Price any listing with comps"</p><p class="meta"><b>Perplexity</b> → /gen/computer-base/ai-for-real-estate-agents<br>41 live ads. The biggest surviving non-store destination.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/109760398882363/ads/6aa644b565430f58d3da1954?page_id=109760398882363">Open in HookRadar</a></div></div>
-    <div class="card"><div class="img"><img src="img/2f4a6e16cd043ce122bbd48ff9e3d3e1.jpg" alt="Perplexity virtual staging ad"><span class="pill brand fmt">IMAGE</span><span class="pill live st">live · 6 d</span></div><div class="body"><p class="hook">"Virtually stage any room"</p><p class="meta"><b>Perplexity</b> → /gen/computer-base/ai-listing-images<br>Upload listing photos. Get staged rooms, retouched images, walkthrough videos.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/109760398882363/ads/6aae2e262e3fe9c4253e9cba?page_id=109760398882363">Open in HookRadar</a></div></div>
-    <div class="card"><div class="img"><img src="img/317c3439be1c7bae573338e06874080f.jpg" alt="Perplexity job applications ad"><span class="pill brand fmt">IMAGE</span><span class="pill live st">live · 1 d</span></div><div class="body"><p class="hook">"Paste your LinkedIn URL and let Computer find jobs you're a great fit for."</p><p class="meta"><b>Perplexity</b> → /gen/computer/job-applications<br>321 ads since April. Relaunched with bullet points three times.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/109760398882363/ads/6ab21f5518b5ea4bc82f0b26?page_id=109760398882363">Open in HookRadar</a></div></div>
-    <div class="card"><div class="img"><img src="img/4c925edc5d1c46d3e10b8d52dcfa15ce.jpg" alt="Perplexity AI SEO ad"><span class="pill brand fmt">IMAGE</span><span class="pill live st">live · 26 d</span></div><div class="body"><p class="hook">"You rank well on Google but ChatGPT never mentioned you."</p><p class="meta"><b>Perplexity</b> → /gen/computer/ai-seo<br>Audit your AI search visibility. Find where competitors get cited.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/109760398882363/ads/6a912f70c0768922be786660?page_id=109760398882363">Open in HookRadar</a></div></div>
-    <div class="card"><div class="img"><img src="img/8ccc8fa0a07a73dcd647cf4d903618cf.jpg" alt="Perplexity Poshmark audit ad"><span class="pill brand fmt">IMAGE</span><span class="pill live st">live · 26 d</span></div><div class="body"><p class="hook">"Your closet has 200 listings. Poshmark is showing 12 of them."</p><p class="meta"><b>Perplexity</b> → /gen/computer/poshmark-audit<br>A number in the first sentence, an audit as the deliverable.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/109760398882363/ads/6a912f73c0768922be786679?page_id=109760398882363">Open in HookRadar</a></div></div>
-    <div class="card"><div class="img"><img src="img/c89b2152e481f6e7f5ba67d788e30dbe.jpg" alt="Perplexity Shopify store ad"><span class="pill brand fmt">IMAGE</span><span class="pill live st">live · 26 d</span></div><div class="body"><p class="hook">"Average Shopify conversion rate: 1.4%. Top stores: 4.7%. The difference is almost never the product."</p><p class="meta"><b>Perplexity</b> → /gen/computer/shopify-store</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/109760398882363/ads/6a912f6ec0768922be78664c?page_id=109760398882363">Open in HookRadar</a></div></div>
-  </div>
+<div class="strip">
+<div class="card"><div class="img"><img src="img/be793c2336b1e07fa3a4949cd9ae7c9d.jpg" alt="Perplexity construction estimate ad"><span class="pill brand fmt">VIDEO</span><span class="pill live st">live · 42 d</span></div><div class="body"><p class="hook">"Blueprints in. Bid-ready estimates out."</p><p class="meta"><b>Perplexity</b> → /gen/computer/construction-estimate<br>Upload your blueprints. Computer builds a bid-ready Excel estimate.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/109760398882363/ads/6a7d65d6a166b5d7f1ae0d6f?page_id=109760398882363">Open in HookRadar</a></div></div>
+<div class="card"><div class="img"><img src="img/58d74f55ca5e839ce6ad8c4a6b13db76.jpg" alt="Perplexity RFI tracking ad"><span class="pill brand fmt">IMAGE</span><span class="pill live st">live · 5 d</span></div><div class="body"><p class="hook">"Draft and track RFIs"</p><p class="meta"><b>Perplexity</b> → /gen/computer-base-construction<br>Second construction page, launched September 16. The vertical is being deepened, not replaced.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/109760398882363/ads/6aae2e252e3fe9c4253e9cb1?page_id=109760398882363">Open in HookRadar</a></div></div>
+<div class="card"><div class="img"><img src="img/c6fa634ef7b2fd01b82105a0c6b6c1e4.jpg" alt="Perplexity real estate comps ad"><span class="pill brand fmt">IMAGE</span><span class="pill live st">live · 11 d</span></div><div class="body"><p class="hook">"Price any listing with comps"</p><p class="meta"><b>Perplexity</b> → /gen/computer-base/ai-for-real-estate-agents<br>41 live ads. The biggest surviving non-store destination.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/109760398882363/ads/6aa644b565430f58d3da1954?page_id=109760398882363">Open in HookRadar</a></div></div>
+<div class="card"><div class="img"><img src="img/2f4a6e16cd043ce122bbd48ff9e3d3e1.jpg" alt="Perplexity virtual staging ad"><span class="pill brand fmt">IMAGE</span><span class="pill live st">live · 6 d</span></div><div class="body"><p class="hook">"Virtually stage any room"</p><p class="meta"><b>Perplexity</b> → /gen/computer-base/ai-listing-images<br>Upload listing photos. Get staged rooms, retouched images, walkthrough videos.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/109760398882363/ads/6aae2e262e3fe9c4253e9cba?page_id=109760398882363">Open in HookRadar</a></div></div>
+<div class="card"><div class="img"><img src="img/317c3439be1c7bae573338e06874080f.jpg" alt="Perplexity job applications ad"><span class="pill brand fmt">IMAGE</span><span class="pill live st">live · 1 d</span></div><div class="body"><p class="hook">"Paste your LinkedIn URL and let Computer find jobs you're a great fit for."</p><p class="meta"><b>Perplexity</b> → /gen/computer/job-applications<br>321 ads since April. Relaunched with bullet points three times.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/109760398882363/ads/6ab21f5518b5ea4bc82f0b26?page_id=109760398882363">Open in HookRadar</a></div></div>
+<div class="card"><div class="img"><img src="img/4c925edc5d1c46d3e10b8d52dcfa15ce.jpg" alt="Perplexity AI SEO ad"><span class="pill brand fmt">IMAGE</span><span class="pill live st">live · 26 d</span></div><div class="body"><p class="hook">"You rank well on Google but ChatGPT never mentioned you."</p><p class="meta"><b>Perplexity</b> → /gen/computer/ai-seo<br>Audit your AI search visibility. Find where competitors get cited.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/109760398882363/ads/6a912f70c0768922be786660?page_id=109760398882363">Open in HookRadar</a></div></div>
+<div class="card"><div class="img"><img src="img/8ccc8fa0a07a73dcd647cf4d903618cf.jpg" alt="Perplexity Poshmark audit ad"><span class="pill brand fmt">IMAGE</span><span class="pill live st">live · 26 d</span></div><div class="body"><p class="hook">"Your closet has 200 listings. Poshmark is showing 12 of them."</p><p class="meta"><b>Perplexity</b> → /gen/computer/poshmark-audit<br>A number in the first sentence, an audit as the deliverable.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/109760398882363/ads/6a912f73c0768922be786679?page_id=109760398882363">Open in HookRadar</a></div></div>
+<div class="card"><div class="img"><img src="img/c89b2152e481f6e7f5ba67d788e30dbe.jpg" alt="Perplexity Shopify store ad"><span class="pill brand fmt">IMAGE</span><span class="pill live st">live · 26 d</span></div><div class="body"><p class="hook">"Average Shopify conversion rate: 1.4%. Top stores: 4.7%. The difference is almost never the product."</p><p class="meta"><b>Perplexity</b> → /gen/computer/shopify-store</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/109760398882363/ads/6a912f6ec0768922be78664c?page_id=109760398882363">Open in HookRadar</a></div></div>
+</div>
 </div>
 <div class="wrap">
-  <p class="caption">Perplexity's construction page is the one trade funnel that graduated from a 30-ad test to a 42-day video. The ad is not about AI. It is about a spreadsheet the estimator no longer has to build.</p>
-  <p>Two more funnels ran alongside and went nowhere. Forty-four creator landing pages (pplx.ai/&lt;creator&gt;, perplexity.ai/influencers/&lt;name&gt;) collected 72 ads between them, one to four each, and none is live. Three Zoom event pages for a September 3 live session ("Your warehouse has the answers, the company doesn't know SQL") carried 7 ads and were the only event funnel in the category this year.</p>
-  <p>The lesson is not that vertical pages fail. The lesson is that the brand with the most money in the category tested roughly 60 verticals and kept two. If your roadmap has "landing page for accountants" on it, Perplexity has already run that test for you: it is in the 92%.</p>
+<p class="caption">Perplexity's construction page is the one trade funnel that graduated from a 30-ad test to a 42-day video. The ad is not about AI. It is about a spreadsheet the estimator no longer has to build.</p>
+<p>Two more funnels ran alongside and went nowhere. Forty-four creator landing pages (pplx.ai/&lt;creator&gt;, perplexity.ai/influencers/&lt;name&gt;) collected 72 ads between them, one to four each, and none is live. Three Zoom event pages for a September 3 live session ("Your warehouse has the answers, the company doesn't know SQL") carried 7 ads and were the only event funnel in the category this year.</p>
+<p>The lesson is not that vertical pages fail. The lesson is that the brand with the most money in the category tested roughly 60 verticals and kept two. Two hypotheses on our own list were versions of pages sitting in that 92%. They did not get a brief.</p>
 </div>
 
 <div class="wrap">
-  <h2>3. Another strong direction: sintra sells "AI employees" and lets a quiz do the routing</h2>
-  <p>sintra.ai runs the highest creative churn in the set (392 ads launched on September 3 alone) and the most legible funnel architecture. Every destination falls into one of six buckets, and the September 21 snapshot shows which buckets the brand still believes in.</p>
+<h2>3. Another strong direction: sintra sells "AI employees" and lets a quiz do the routing</h2>
+<p>sintra.ai runs the highest creative churn in the set (392 ads launched on September 3 alone) and the most legible funnel architecture. Every destination falls into one of six buckets, and the September 21 snapshot shows which buckets the brand still believes in.</p>
 </div>
 <div class="wide">
-  <div class="tablewrap"><table>
-    <tr><th>Funnel type</th><th>Pages</th><th>Ads</th><th>Still funded</th></tr>
-    <tr><td>Quiz ("Which AI tools are best for your business?")</td><td>/quiz, /quiz-gpt, /quiz-claude, /quiz-marketing, /quiz/seo</td><td class="num">1,423 (31%)</td><td><span class="pill live">3 of 5</span></td></tr>
-    <tr><td>Role pages ("hire your AI copywriter")</td><td>/ai-employees/copywriter, sales-agent, social-media-manager, virtual-assistant, seo-agent, customer-service</td><td class="num">210</td><td><span class="pill live">6 of 6</span></td></tr>
-    <tr><td>Industry pages</td><td>/restaurant-owners, /beautysalon-monthly (+extra), /clothingbrand-monthly, /jewelrybrand, /consultant, /mechanic-shops, /beauty</td><td class="num">456</td><td><span class="pill dead">0 of 7</span></td></tr>
-    <tr><td>Second domain</td><td>sintra.com/restaurant, /beauty, /jewellery, /mechanics</td><td class="num">27</td><td><span class="pill dead">0 of 4</span></td></tr>
-    <tr><td>Builder pages ("build your own helper")</td><td>/build, /helper/build, /helper/hire</td><td class="num">446</td><td><span class="pill dead">0 of 3</span></td></tr>
-    <tr><td>App stores</td><td>iOS, Google Play</td><td class="num">41</td><td><span class="pill dead">0 of 2</span></td></tr>
-  </table></div>
-  <div class="strip">
-    <div class="card"><div class="img"><img src="img/57f1e81f0466d3b26f7995d4fb02a802.jpg" alt="sintra single point of failure ad"><span class="pill brand fmt">IMAGE</span><span class="pill live st">live · 16 d</span></div><div class="body"><p class="hook">"You're the single point of failure in your own business, and you know it."</p><p class="meta"><b>sintra.ai</b> → /x and six role pages<br>44,836 EU impressions in 16 days. Signal grade A. Same copy, seven destinations.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/113229318341221/ads/6a9e6e824f0c87345f85c94d?page_id=113229318341221">Open in HookRadar</a></div></div>
-    <div class="card"><div class="img"><img src="img/35137d1be25aab86bb7423fd75f044d8.jpg" alt="sintra quiz-gpt ad"><span class="pill brand fmt">VIDEO</span><span class="pill live st">live · 9 d</span></div><div class="body"><p class="hook">"Is prompting starting to feel like a second job? Retyping who you are, what you do… every single chat."</p><p class="meta"><b>sintra.ai</b> → /quiz-gpt<br>The quiz that survived names the tool the buyer already pays for.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/113229318341221/ads/6aa90bf065430f58d3dad737?page_id=113229318341221">Open in HookRadar</a></div></div>
-    <div class="card"><div class="img"><img src="img/98b4f9011c1f3f99410c1afe4f549c84.jpg" alt="sintra second brain ad"><span class="pill brand fmt">IMAGE</span><span class="pill live st">live · 16 d</span></div><div class="body"><p class="hook">"You've got a lot of thoughts in your head, and you've got to get them out."</p><p class="meta"><b>sintra.ai</b> → /ai-employees/virtual-assistant<br>24,844 EU impressions. A role page, not an industry page.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/113229318341221/ads/6a9e6e8c4f0c87345f85c9ba?page_id=113229318341221">Open in HookRadar</a></div></div>
-    <div class="card"><div class="img"><img src="img/e29ae8a2ebf7b34250a095bdef023e61.jpg" alt="sintra creator UGC ad"><span class="pill brand fmt">VIDEO</span><span class="pill live st">live · 2 d</span></div><div class="body"><p class="hook">"content creation is highkey 90% admin work and 10% filming and editing"</p><p class="meta"><b>sintra.ai</b> → /quiz-marketing<br>TikTok-native UGC with a comment-gate CTA. 15,493 EU impressions in 48 hours.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/113229318341221/ads/6ab21f5a18b5ea4bc82f0b63?page_id=113229318341221">Open in HookRadar</a></div></div>
-    <div class="card"><div class="img"><img src="img/23e9ec4ccfa04de6fdff79156529bdfa.jpg" alt="sintra generic quiz ad, stopped"><span class="pill brand fmt">VIDEO</span><span class="pill dead st">stopped · ran 32 d</span></div><div class="body"><p class="hook">"Take Free Quiz and Find Which AI Tools are Best for your Business."</p><p class="meta"><b>sintra.ai</b> → /quiz<br>16 duplicates, 32 days, then off. The generic quiz died; the model-named one lived.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/113229318341221/ads/6a587f83d29c59cfda47797b?page_id=113229318341221">Open in HookRadar</a></div></div>
-    <div class="card"><div class="img"><img src="img/b148eecf4e8792364263ee505d3ecffc.jpg" alt="sintra SEO specialist ad"><span class="pill brand fmt">IMAGE</span><span class="pill live st">live · 17 d</span></div><div class="body"><p class="hook">"Your SEO, finally moving. Meet your AI SEO specialist."</p><p class="meta"><b>sintra.ai</b> → /ai-employees/seo-agent<br>Hook Insights: 95th percentile, the only sintra formula trending up.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/113229318341221/ads/6a9e6ea94f0c87345f85ca7f?page_id=113229318341221">Open in HookRadar</a></div></div>
-  </div>
+<div class="tablewrap"><table>
+<tr><th>Funnel type</th><th>Pages</th><th>Ads</th><th>Still funded</th></tr>
+<tr><td>Quiz ("Which AI tools are best for your business?")</td><td>/quiz, /quiz-gpt, /quiz-claude, /quiz-marketing, /quiz/seo</td><td class="num">1,423 (31%)</td><td><span class="pill live">3 of 5</span></td></tr>
+<tr><td>Role pages ("hire your AI copywriter")</td><td>/ai-employees/copywriter, sales-agent, social-media-manager, virtual-assistant, seo-agent, customer-service</td><td class="num">210</td><td><span class="pill live">6 of 6</span></td></tr>
+<tr><td>Industry pages</td><td>/restaurant-owners, /beautysalon-monthly (+extra), /clothingbrand-monthly, /jewelrybrand, /consultant, /mechanic-shops, /beauty</td><td class="num">456</td><td><span class="pill dead">0 of 7</span></td></tr>
+<tr><td>Second domain</td><td>sintra.com/restaurant, /beauty, /jewellery, /mechanics</td><td class="num">27</td><td><span class="pill dead">0 of 4</span></td></tr>
+<tr><td>Builder pages ("build your own helper")</td><td>/build, /helper/build, /helper/hire</td><td class="num">446</td><td><span class="pill dead">0 of 3</span></td></tr>
+<tr><td>App stores</td><td>iOS, Google Play</td><td class="num">41</td><td><span class="pill dead">0 of 2</span></td></tr>
+</table></div>
+<div class="strip">
+<div class="card"><div class="img"><img src="img/57f1e81f0466d3b26f7995d4fb02a802.jpg" alt="sintra single point of failure ad"><span class="pill brand fmt">IMAGE</span><span class="pill live st">live · 16 d</span></div><div class="body"><p class="hook">"You're the single point of failure in your own business, and you know it."</p><p class="meta"><b>sintra.ai</b> → /x and six role pages<br>44,836 EU impressions in 16 days. Signal grade A. Same copy, seven destinations.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/113229318341221/ads/6a9e6e824f0c87345f85c94d?page_id=113229318341221">Open in HookRadar</a></div></div>
+<div class="card"><div class="img"><img src="img/35137d1be25aab86bb7423fd75f044d8.jpg" alt="sintra quiz-gpt ad"><span class="pill brand fmt">VIDEO</span><span class="pill live st">live · 9 d</span></div><div class="body"><p class="hook">"Is prompting starting to feel like a second job? Retyping who you are, what you do… every single chat."</p><p class="meta"><b>sintra.ai</b> → /quiz-gpt<br>The quiz that survived names the tool the buyer already pays for.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/113229318341221/ads/6aa90bf065430f58d3dad737?page_id=113229318341221">Open in HookRadar</a></div></div>
+<div class="card"><div class="img"><img src="img/98b4f9011c1f3f99410c1afe4f549c84.jpg" alt="sintra second brain ad"><span class="pill brand fmt">IMAGE</span><span class="pill live st">live · 16 d</span></div><div class="body"><p class="hook">"You've got a lot of thoughts in your head, and you've got to get them out."</p><p class="meta"><b>sintra.ai</b> → /ai-employees/virtual-assistant<br>24,844 EU impressions. A role page, not an industry page.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/113229318341221/ads/6a9e6e8c4f0c87345f85c9ba?page_id=113229318341221">Open in HookRadar</a></div></div>
+<div class="card"><div class="img"><img src="img/e29ae8a2ebf7b34250a095bdef023e61.jpg" alt="sintra creator UGC ad"><span class="pill brand fmt">VIDEO</span><span class="pill live st">live · 2 d</span></div><div class="body"><p class="hook">"content creation is highkey 90% admin work and 10% filming and editing"</p><p class="meta"><b>sintra.ai</b> → /quiz-marketing<br>TikTok-native UGC with a comment-gate CTA. 15,493 EU impressions in 48 hours.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/113229318341221/ads/6ab21f5a18b5ea4bc82f0b63?page_id=113229318341221">Open in HookRadar</a></div></div>
+<div class="card"><div class="img"><img src="img/23e9ec4ccfa04de6fdff79156529bdfa.jpg" alt="sintra generic quiz ad, stopped"><span class="pill brand fmt">VIDEO</span><span class="pill dead st">stopped · ran 32 d</span></div><div class="body"><p class="hook">"Take Free Quiz and Find Which AI Tools are Best for your Business."</p><p class="meta"><b>sintra.ai</b> → /quiz<br>16 duplicates, 32 days, then off. The generic quiz died; the model-named one lived.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/113229318341221/ads/6a587f83d29c59cfda47797b?page_id=113229318341221">Open in HookRadar</a></div></div>
+<div class="card"><div class="img"><img src="img/b148eecf4e8792364263ee505d3ecffc.jpg" alt="sintra SEO specialist ad"><span class="pill brand fmt">IMAGE</span><span class="pill live st">live · 17 d</span></div><div class="body"><p class="hook">"Your SEO, finally moving. Meet your AI SEO specialist."</p><p class="meta"><b>sintra.ai</b> → /ai-employees/seo-agent<br>Hook Insights: 95th percentile, the only sintra formula trending up.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/113229318341221/ads/6a9e6ea94f0c87345f85ca7f?page_id=113229318341221">Open in HookRadar</a></div></div>
+</div>
 </div>
 <div class="wrap">
-  <p class="caption">sintra's live set: one owner-burnout statement, seven destinations. The ad does not change; the page does.</p>
-  <p><strong>The quiz survived by naming the model you already pay for.</strong> Plain /quiz is dead. /quiz-gpt and /quiz-claude, launched the same day in August with 17 video variants between them, are both live. The current hook does not mention sintra's product at all.</p>
-  <p><strong>Roles beat industries.</strong> Every industry page (restaurants, salons, clothing brands, jewelry, mechanics) has gone dark. Every role page is live, fed by one image family. The same copy is pointed at six different role pages plus the homepage, which means the destination is the variable being tested, not the creative.</p>
-  <p><strong>What sintra has already killed for you:</strong> every discount and price-anchor hook ("Up to 70% OFF", "PAY FOR 1, GET 12", "From $5,000+/mo to $15.60/mo", "Replace your $5k marketing agency in 5 minutes"), the head-to-head "ChatGPT vs Sintra" comparison (launched and stopped three times: July 27, August 10, August 31), long-form story images, and the cartoon "The team you could never afford. Hired." The brand that tests more than anyone in the category has stopped paying for all of them.</p>
+<p class="caption">sintra's live set: one owner-burnout statement, seven destinations. The ad does not change; the page does.</p>
+<p><strong>The quiz survived by naming the model you already pay for.</strong> Plain /quiz is dead. /quiz-gpt and /quiz-claude, launched the same day in August with 17 video variants between them, are both live. The current hook does not mention sintra's product at all.</p>
+<p><strong>Roles beat industries.</strong> Every industry page (restaurants, salons, clothing brands, jewelry, mechanics) has gone dark. Every role page is live, fed by one image family. The same copy is pointed at six different role pages plus the homepage, which means the destination is the variable being tested, not the creative.</p>
+<p><strong>What sintra has already killed, so we did not have to:</strong> every discount and price-anchor hook ("Up to 70% OFF", "PAY FOR 1, GET 12", "From $5,000+/mo to $15.60/mo", "Replace your $5k marketing agency in 5 minutes"), the head-to-head "ChatGPT vs Sintra" comparison (launched and stopped three times: July 27, August 10, August 31), long-form story images, and the cartoon "The team you could never afford. Hired." The brand that tests more than anyone in the category has stopped paying for all of them.</p>
 </div>
 
 <div class="wrap">
-  <h2>4. Manus and Lindy: install-first, and the funnel that never left the homepage</h2>
-  <p><strong>Manus has one funnel and refuses to test another.</strong> Of 2,590 tracked ads, 2,544 send to the App Store or Google Play. The website got 43 ads. A co-branded page with Nothing phones got 3. All 19 live ads are text-less vertical videos with a localized install button ("Install now", "Installer", "Cài đặt ngay") that have been running 50 to 68 days.</p>
-  <p>The creative does the qualifying that sintra's quiz does. HookRadar's Hook Insights rank Manus's Arabic transformation hook ("I thought preparing presentations took hours… until I tried this") at the 99th percentile of the whole category, and a Chinese "two months until my birthday, I need a set of stunning photos" hook at the 98th. Neither mentions agents, models or work. They sell one finished artifact to one person in their own language, then hand them to the store.</p>
+<h2>4. Manus and Lindy: install-first, and the funnel that never left the homepage</h2>
+<p><strong>Manus has one funnel and refuses to test another.</strong> Of 2,590 tracked ads, 2,544 send to the App Store or Google Play. The website got 43 ads. A co-branded page with Nothing phones got 3. All 19 live ads are text-less vertical videos with a localized install button ("Install now", "Installer", "Cài đặt ngay") that have been running 50 to 68 days.</p>
+<p>The creative does the qualifying that sintra's quiz does. HookRadar's Hook Insights rank Manus's Arabic transformation hook ("I thought preparing presentations took hours… until I tried this") at the 99th percentile of the whole category, and a Chinese "two months until my birthday, I need a set of stunning photos" hook at the 98th. Neither mentions agents, models or work. They sell one finished artifact to one person in their own language, then hand them to the store.</p>
 </div>
 <div class="wide">
-  <div class="strip">
-    <div class="card"><div class="img"><img src="img/32e0e5a9174e879b1eb1c110fc8dfba6.jpg" alt="Manus install video"><span class="pill brand fmt">VIDEO</span><span class="pill live st">live · 61 d</span></div><div class="body"><p class="hook">No title, no body copy. Just the video and "Cài đặt ngay".</p><p class="meta"><b>Manus AI</b> → App Store<br>Signal 9,968, grade A. The top creative in the workspace has no text at all.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/779464311926422/ads/6a6469d2e222e7b4819b99f1?page_id=779464311926422">Open in HookRadar</a></div></div>
-    <div class="card"><div class="img"><img src="img/1474e551d5c25828eaadf6d46ae921da.jpg" alt="Manus Chinese birthday photos hook"><span class="pill brand fmt">VIDEO</span><span class="pill live st">live · 61 d</span></div><div class="body"><p class="hook">"Two more months until my birthday! My birthday means I must post a set of beautiful photos!"</p><p class="meta"><b>Manus AI</b> → App Store · zh-TW<br>98th percentile hook. Nothing about agents; one artifact for one person.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/779464311926422/ads/6a646997e222e7b4819b9613?page_id=779464311926422">Open in HookRadar</a></div></div>
-    <div class="card"><div class="img"><img src="img/5fdddedbde15856caab1df9ef96d520b.jpg" alt="Manus Brazilian creator partnership"><span class="pill brand fmt">VIDEO</span><span class="pill live st">live · 16 d</span></div><div class="body"><p class="hook">"@manus já faz parte da minha rotina."</p><p class="meta"><b>Manus AI</b> → Google Play · pt-BR<br>The only creator spot in the set with production credits. It goes to the store, not to a creator page.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/779464311926422/ads/6a9e64f84f0c87345f858729?page_id=779464311926422">Open in HookRadar</a></div></div>
-    <div class="card"><div class="img"><img src="img/fa48c5edd513056aca2f414e0769721d.jpg" alt="Lindy finished task ad"><span class="pill brand fmt">DCO</span><span class="pill live st">live · 11 d</span></div><div class="body"><p class="hook">"Most AI hands you a draft. Lindy hands you a finished task, in the tools your team already uses."</p><p class="meta"><b>Lindy</b> → lindy.ai<br>20+ variants since September 10. The category's converging message.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/136704839531501/ads/6aa6487165430f58d3da3e61?page_id=136704839531501">Open in HookRadar</a></div></div>
-    <div class="card"><div class="img"><img src="img/b3895a397c80c046c36deb522af285c9.jpg" alt="Lindy agency owners ad"><span class="pill brand fmt">VIDEO</span><span class="pill live st">live · 5 d</span></div><div class="body"><p class="hook">"My best account manager quit and I almost closed the agency."</p><p class="meta"><b>Lindy</b> → lindy.ai<br>A retry of the July "Sarah's last day is Friday" handover angle, now framed for agency owners.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/136704839531501/ads/6aae2e652e3fe9c4253e9f5b?page_id=136704839531501">Open in HookRadar</a></div></div>
-    <div class="card"><div class="img"><img src="img/9b76f2dfb418b8a10edb844939e71e42.jpg" alt="Lindy pipeline ad"><span class="pill brand fmt">DCO</span><span class="pill live st">live · 5 d</span></div><div class="body"><p class="hook">"Woke up to a clean CRM, follow-ups drafted in my voice, calls prepped, and my calendar reshuffled."</p><p class="meta"><b>Lindy</b> → lindy.ai/go<br>The June inbox-POV promise, kept; the meetingsai.com brand, dropped.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/136704839531501/ads/6aae2f0b2e3fe9c4253ea637?page_id=136704839531501">Open in HookRadar</a></div></div>
-  </div>
+<div class="strip">
+<div class="card"><div class="img"><img src="img/32e0e5a9174e879b1eb1c110fc8dfba6.jpg" alt="Manus install video"><span class="pill brand fmt">VIDEO</span><span class="pill live st">live · 61 d</span></div><div class="body"><p class="hook">No title, no body copy. Just the video and "Cài đặt ngay".</p><p class="meta"><b>Manus AI</b> → App Store<br>Signal 9,968, grade A. The top creative in the workspace has no text at all.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/779464311926422/ads/6a6469d2e222e7b4819b99f1?page_id=779464311926422">Open in HookRadar</a></div></div>
+<div class="card"><div class="img"><img src="img/1474e551d5c25828eaadf6d46ae921da.jpg" alt="Manus Chinese birthday photos hook"><span class="pill brand fmt">VIDEO</span><span class="pill live st">live · 61 d</span></div><div class="body"><p class="hook">"Two more months until my birthday! My birthday means I must post a set of beautiful photos!"</p><p class="meta"><b>Manus AI</b> → App Store · zh-TW<br>98th percentile hook. Nothing about agents; one artifact for one person.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/779464311926422/ads/6a646997e222e7b4819b9613?page_id=779464311926422">Open in HookRadar</a></div></div>
+<div class="card"><div class="img"><img src="img/5fdddedbde15856caab1df9ef96d520b.jpg" alt="Manus Brazilian creator partnership"><span class="pill brand fmt">VIDEO</span><span class="pill live st">live · 16 d</span></div><div class="body"><p class="hook">"@manus já faz parte da minha rotina."</p><p class="meta"><b>Manus AI</b> → Google Play · pt-BR<br>The only creator spot in the set with production credits. It goes to the store, not to a creator page.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/779464311926422/ads/6a9e64f84f0c87345f858729?page_id=779464311926422">Open in HookRadar</a></div></div>
+<div class="card"><div class="img"><img src="img/fa48c5edd513056aca2f414e0769721d.jpg" alt="Lindy finished task ad"><span class="pill brand fmt">DCO</span><span class="pill live st">live · 11 d</span></div><div class="body"><p class="hook">"Most AI hands you a draft. Lindy hands you a finished task, in the tools your team already uses."</p><p class="meta"><b>Lindy</b> → lindy.ai<br>20+ variants since September 10. The category's converging message.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/136704839531501/ads/6aa6487165430f58d3da3e61?page_id=136704839531501">Open in HookRadar</a></div></div>
+<div class="card"><div class="img"><img src="img/b3895a397c80c046c36deb522af285c9.jpg" alt="Lindy agency owners ad"><span class="pill brand fmt">VIDEO</span><span class="pill live st">live · 5 d</span></div><div class="body"><p class="hook">"My best account manager quit and I almost closed the agency."</p><p class="meta"><b>Lindy</b> → lindy.ai<br>A retry of the July "Sarah's last day is Friday" handover angle, now framed for agency owners.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/136704839531501/ads/6aae2e652e3fe9c4253e9f5b?page_id=136704839531501">Open in HookRadar</a></div></div>
+<div class="card"><div class="img"><img src="img/9b76f2dfb418b8a10edb844939e71e42.jpg" alt="Lindy pipeline ad"><span class="pill brand fmt">DCO</span><span class="pill live st">live · 5 d</span></div><div class="body"><p class="hook">"Woke up to a clean CRM, follow-ups drafted in my voice, calls prepped, and my calendar reshuffled."</p><p class="meta"><b>Lindy</b> → lindy.ai/go<br>The June inbox-POV promise, kept; the meetingsai.com brand, dropped.</p><a class="go" href="https://platform.hookradar.net/teams/swork/competitors/136704839531501/ads/6aae2f0b2e3fe9c4253ea637?page_id=136704839531501">Open in HookRadar</a></div></div>
+</div>
 </div>
 <div class="wrap">
-  <p class="caption">Manus's September wave: 300+ ads in ten days (September 4 to 14), every one of them to a store listing, then silence from September 15. The brand spends in bursts, not in tests.</p>
-  <p><strong>Lindy tried to be two brands and came back as one.</strong> Lindy's 346 ads split across lindy.ai (177), lindy.ai/go (131) and a separate identity at meetingsai.com with four sub-pages (/brain, /never-blocked, /nobusywork, /doer). The meetingsai experiment absorbed 38 ads and has zero live. After going silent from July 17 to August 19, Lindy relaunched on September 11 and 17 with 41 ads, all to lindy.ai.</p>
-  <p class="caption">Lindy's relaunch drops the second brand, the Slack-inbox POV and the coworker-curiosity hooks. What is left is the promise every rival now makes: finished work, not a draft.</p>
+<p class="caption">Manus's September wave: 300+ ads in ten days (September 4 to 14), every one of them to a store listing, then silence from September 15. The brand spends in bursts, not in tests.</p>
+<p><strong>Lindy tried to be two brands and came back as one.</strong> Lindy's 346 ads split across lindy.ai (177), lindy.ai/go (131) and a separate identity at meetingsai.com with four sub-pages (/brain, /never-blocked, /nobusywork, /doer). The meetingsai experiment absorbed 38 ads and has zero live. After going silent from July 17 to August 19, Lindy relaunched on September 11 and 17 with 41 ads, all to lindy.ai.</p>
+<p class="caption">Lindy's relaunch drops the second brand, the Slack-inbox POV and the coworker-curiosity hooks. What is left is the promise every rival now makes: finished work, not a draft.</p>
 </div>
 
 <div class="wrap">
-  <h2>5. The borrowing map: which funnel ideas travel between brands, and which die on arrival</h2>
-  <p>HookRadar tracks 15 brands across four adjacent categories for Speechify (AI work agents, reading and TTS apps, dictation, language learning), roughly 75,000 Meta ads and 670 destination URLs in total. That is enough to see the same funnel idea appear in several places and to check what happened to it each time.</p>
+<h2>5. The borrowing map: which funnel ideas travel between brands, and which die on arrival</h2>
+<p>HookRadar tracks 15 brands across four adjacent categories for Speechify (AI work agents, reading and TTS apps, dictation, language learning), roughly 75,000 Meta ads and 670 destination URLs in total. That is enough to see the same funnel idea appear in several places and to check what happened to it each time.</p>
 </div>
 <div class="wide">
-  <div class="tablewrap"><table>
-    <tr><th>Funnel idea</th><th>Who runs it</th><th>What happened</th></tr>
-    <tr><td>A landing page per named trade or job</td><td>Perplexity (203 pages), sintra (7 industry + 6 role), Wispr Flow (clinicians, lawyers, real-estate agents, bilingual professionals, creators), ElevenLabs (financial services, retail, reception.ai/salons), Grammarly (/students)</td><td>Five brands in three categories arrived at it independently. Survivors are roles and artifacts, not industries: sintra keeps 6 of 6 role pages and 0 of 7 industry pages; Perplexity keeps construction and real estate out of roughly 60 verticals.</td></tr>
-    <tr><td>Quiz funnel</td><td>sintra (5 quizzes, 31% of ads), Promova (5 quizzes, 26%), Endel (22 ADHD and sleep variants), Headway (skillsta.app/quiz, 1,848 ads)</td><td>A consumer-subscription playbook imported into AI agents by sintra alone. Works when the quiz names the buyer's current tool (/quiz-gpt, /quiz-claude live), dies as a generic tool-picker (/quiz dead).</td></tr>
-    <tr><td>A page named after a rival's model</td><td>sintra only: /quiz-gpt (362 ads), /quiz-claude (208), /claude (3)</td><td>Both quizzes live. Perplexity runs the same idea at creative level ("GPT is in Perplexity?", "I was paying $20 a month for GPT") with no dedicated page.</td></tr>
-    <tr><td>Second domain or brand</td><td>Lindy (meetingsai.com, 38 ads), sintra (sintra.com, 27), Promova (english-improve.com, 1,802), Headway (skillsta.app, 1,848)</td><td>The main channel for two consumer brands. Abandoned by both AI-agent brands that tried it.</td></tr>
-    <tr><td>Store-direct install</td><td>Manus (98% of ads), Perplexity (2,725 deeplinks), ElevenLabs (1,759), sintra (41)</td><td>Manus's only model. sintra tested and dropped it.</td></tr>
-    <tr><td>Live event or webinar</td><td>Perplexity (3 Zoom pages, 7 ads), Grammarly (product tours, 5), Wispr Flow (luma event, 6), ElevenLabs (summit, 40)</td><td>Every brand runs a micro-test. Nobody scales it.</td></tr>
-    <tr><td>Creator landing pages</td><td>Perplexity (44 pages, 72 ads, 0 live), Wispr Flow (/steven 140 ads, /ali 30), Promova (/lp/elena)</td><td>Wispr Flow's second-biggest destination after the homepage. Perplexity's is fully abandoned; Manus sends creator traffic to the store instead.</td></tr>
-  </table></div>
+<div class="tablewrap"><table>
+<tr><th>Funnel idea</th><th>Who runs it</th><th>What happened</th></tr>
+<tr><td>A landing page per named trade or job</td><td>Perplexity (203 pages), sintra (7 industry + 6 role), Wispr Flow (clinicians, lawyers, real-estate agents, bilingual professionals, creators), ElevenLabs (financial services, retail, reception.ai/salons), Grammarly (/students)</td><td>Five brands in three categories arrived at it independently. Survivors are roles and artifacts, not industries: sintra keeps 6 of 6 role pages and 0 of 7 industry pages; Perplexity keeps construction and real estate out of roughly 60 verticals.</td></tr>
+<tr><td>Quiz funnel</td><td>sintra (5 quizzes, 31% of ads), Promova (5 quizzes, 26%), Endel (22 ADHD and sleep variants), Headway (skillsta.app/quiz, 1,848 ads)</td><td>A consumer-subscription playbook imported into AI agents by sintra alone. Works when the quiz names the buyer's current tool (/quiz-gpt, /quiz-claude live), dies as a generic tool-picker (/quiz dead).</td></tr>
+<tr><td>A page named after a rival's model</td><td>sintra only: /quiz-gpt (362 ads), /quiz-claude (208), /claude (3)</td><td>Both quizzes live. Perplexity runs the same idea at creative level ("GPT is in Perplexity?", "I was paying $20 a month for GPT") with no dedicated page.</td></tr>
+<tr><td>Second domain or brand</td><td>Lindy (meetingsai.com, 38 ads), sintra (sintra.com, 27), Promova (english-improve.com, 1,802), Headway (skillsta.app, 1,848)</td><td>The main channel for two consumer brands. Abandoned by both AI-agent brands that tried it.</td></tr>
+<tr><td>Store-direct install</td><td>Manus (98% of ads), Perplexity (2,725 deeplinks), ElevenLabs (1,759), sintra (41)</td><td>Manus's only model. sintra tested and dropped it.</td></tr>
+<tr><td>Live event or webinar</td><td>Perplexity (3 Zoom pages, 7 ads), Grammarly (product tours, 5), Wispr Flow (luma event, 6), ElevenLabs (summit, 40)</td><td>Every brand runs a micro-test. Nobody scales it.</td></tr>
+<tr><td>Creator landing pages</td><td>Perplexity (44 pages, 72 ads, 0 live), Wispr Flow (/steven 140 ads, /ali 30), Promova (/lp/elena)</td><td>Wispr Flow's second-biggest destination after the homepage. Perplexity's is fully abandoned; Manus sends creator traffic to the store instead.</td></tr>
+</table></div>
 </div>
 <div class="wrap">
-  <p>Two patterns hold across the map. First, an idea that works in consumer subscriptions (quiz, second domain, creator page) does not port to AI work tools by default; only the version that names the buyer's existing tool or role made it. Second, when four brands converge on a funnel shape, the survivors are the narrowest versions of it. "AI for real estate agents" lives. "AI for restaurants" is dead at two brands.</p>
+<p>Two patterns hold across the map. First, an idea that works in consumer subscriptions (quiz, second domain, creator page) does not port to AI work tools by default; only the version that names the buyer's existing tool or role made it. Second, when four brands converge on a funnel shape, the survivors are the narrowest versions of it. "AI for real estate agents" lives. "AI for restaurants" is dead at two brands.</p>
 </div>
 
 <div class="wrap">
-  <h2>6. Creative borrowing with dates: who picked up what, and how fast</h2>
-  <p>Funnels move slowly. Hooks move in weeks. Ten weekly HookRadar reports (June 29 to September 7) plus the September 21 snapshot show the same angles passing between brands.</p>
+<h2>6. Creative borrowing with dates: who picked up what, and how fast</h2>
+<p>Funnels move slowly. Hooks move in weeks. Ten weekly HookRadar reports (June 29 to September 7) plus the September 21 snapshot show the same angles passing between brands.</p>
 </div>
 <div class="wide">
-  <div class="tablewrap"><table>
-    <tr><th>Angle</th><th>Chain</th><th>Status</th></tr>
-    <tr><td>"Not a chatbot. An agent that hands you finished work."</td><td>Manus, June ("Manus isn't a chatbot. It is an agent.", 93rd pct) → Perplexity, Aug 18 ("You describe the outcome. Computer… hands you back finished work.") → Lindy, Sep 10 ("Most AI hands you a draft. Lindy hands you a finished task.")</td><td><span class="pill live">live at all three</span></td></tr>
-    <tr><td>The co-worker who never looks busy and gets promoted</td><td>Lindy, Jun 3 ("My coworker has been secretly cheating and I'm exposing him") → Manus, Aug 12 (Arabic, 12 s) → Perplexity, Aug 15 ("I caught my 'genius' co-worker using THIS", 23 s)</td><td><span class="pill dead">originator dropped it</span> two followers live</td></tr>
-    <tr><td>The key person quits</td><td>Lindy, Jul 16 ("Your company's brain. Sarah's last day is Friday", stopped) → Lindy, Sep 16 ("My best account manager quit and I almost closed the agency")</td><td><span class="pill live">retry live</span></td></tr>
-    <tr><td>One subscription replaces GPT, Claude and Gemini</td><td>Perplexity only: "Cancel GPT, cancel Claude, cancel Gemini" (Jun 9, stopped) → "I was paying $20 a month for GPT" (live since Jul 20) → "How many AIs are you paying for right now?" (Aug 31)</td><td>12 of 14 consolidation creatives in the analysed sample are Perplexity's. Nobody borrowed it.</td></tr>
-    <tr><td>Head-to-head with ChatGPT</td><td>sintra: launched Jul 27, stopped; relaunched Aug 10, stopped Aug 31</td><td><span class="pill dead">3 launches, 3 stops</span></td></tr>
-    <tr><td>Discount and price anchor</td><td>sintra: "70% OFF", "$1/day", "PAY FOR 1, GET 12", "$5k agency", "$15.60/mo"</td><td><span class="pill dead">all stopped in 2–6 weeks</span></td></tr>
-    <tr><td>Specific-dollar outcome in the first sentence</td><td>Perplexity: "Here's how I saved $30,000 using AI" (10 same-identity assets, 90+ days), "$10k a month YouTube channel" (&gt;1M impressions in 66 days)</td><td><span class="pill live">longest-running video hooks</span> not yet copied</td></tr>
-  </table></div>
+<div class="tablewrap"><table>
+<tr><th>Angle</th><th>Chain</th><th>Status</th></tr>
+<tr><td>"Not a chatbot. An agent that hands you finished work."</td><td>Manus, June ("Manus isn't a chatbot. It is an agent.", 93rd pct) → Perplexity, Aug 18 ("You describe the outcome. Computer… hands you back finished work.") → Lindy, Sep 10 ("Most AI hands you a draft. Lindy hands you a finished task.")</td><td><span class="pill live">live at all three</span></td></tr>
+<tr><td>The co-worker who never looks busy and gets promoted</td><td>Lindy, Jun 3 ("My coworker has been secretly cheating and I'm exposing him") → Manus, Aug 12 (Arabic, 12 s) → Perplexity, Aug 15 ("I caught my 'genius' co-worker using THIS", 23 s)</td><td><span class="pill dead">originator dropped it</span> two followers live</td></tr>
+<tr><td>The key person quits</td><td>Lindy, Jul 16 ("Your company's brain. Sarah's last day is Friday", stopped) → Lindy, Sep 16 ("My best account manager quit and I almost closed the agency")</td><td><span class="pill live">retry live</span></td></tr>
+<tr><td>One subscription replaces GPT, Claude and Gemini</td><td>Perplexity only: "Cancel GPT, cancel Claude, cancel Gemini" (Jun 9, stopped) → "I was paying $20 a month for GPT" (live since Jul 20) → "How many AIs are you paying for right now?" (Aug 31)</td><td>12 of 14 consolidation creatives in the analysed sample are Perplexity's. Nobody borrowed it.</td></tr>
+<tr><td>Head-to-head with ChatGPT</td><td>sintra: launched Jul 27, stopped; relaunched Aug 10, stopped Aug 31</td><td><span class="pill dead">3 launches, 3 stops</span></td></tr>
+<tr><td>Discount and price anchor</td><td>sintra: "70% OFF", "$1/day", "PAY FOR 1, GET 12", "$5k agency", "$15.60/mo"</td><td><span class="pill dead">all stopped in 2–6 weeks</span></td></tr>
+<tr><td>Specific-dollar outcome in the first sentence</td><td>Perplexity: "Here's how I saved $30,000 using AI" (10 same-identity assets, 90+ days), "$10k a month YouTube channel" (&gt;1M impressions in 66 days)</td><td><span class="pill live">longest-running video hooks</span> not yet copied</td></tr>
+</table></div>
 </div>
 <div class="wrap">
-  <p class="caption">The co-worker hook is the fastest borrow on record here: Lindy's June original was dead by the time Manus and Perplexity shipped their versions in mid-August. By the time a pattern looks new to an outside team, it has usually finished one full cycle.</p>
+<p class="caption">The co-worker hook is the fastest borrow on record here: Lindy's June original was dead by the time Manus and Perplexity shipped their versions in mid-August. By the time a pattern looks new to an outside team, it has usually finished one full cycle.</p>
 </div>
 
 <div class="wrap">
-  <h2>7. Key takeaways &amp; what to test next</h2>
-  <ul class="takeaways">
-    <li><b>Read the destination, not the creative.</b> A hook tells you what a competitor wants to be true. The landing page it still pays for tells you what turned out to be true. In this category the gap is 92% of tested pages.</li>
-    <li><b>Treat a competitor's dead funnel as a finished experiment.</b> Perplexity ran roughly 60 verticals and kept two. sintra ran seven industry pages and kept none. If a use case appears on both lists of the dead, it does not need your engineering time to be disproven.</li>
-    <li><b>Sell a role or an artifact, not an industry.</b> "AI copywriter" and "bid-ready estimate" are live. "AI for restaurants" is dead at two brands. Narrow by the job someone is hired for, not by the building they work in.</li>
-    <li><b>Name the tool the buyer already pays for.</b> The only sintra quizzes alive are /quiz-gpt and /quiz-claude. The generic quiz died. Meeting the buyer inside their current subscription beats asking them to pick a category.</li>
-    <li><b>Open with finished work, not with AI.</b> Three of four brands now open with some version of "hands you a finished task." It is table stakes, which also means it no longer differentiates. The live hooks that do differentiate name a number ("$30,000", "200 listings, 12 showing") or a document ("bid-ready Excel estimate").</li>
-    <li><b>Skip what the biggest spender has already stopped paying for.</b> Discounts, ChatGPT head-to-heads, creator landing pages, a second brand domain, live webinars. Every one of these was funded and dropped inside the last five months.</li>
-    <li><b>Test the empty rows.</b> Nobody in the set leads with an approval step ("you review, you send"), a compliance standard, or the buyer's own AI bill on screen. Those are the gaps HookRadar's gap check found in 639 analysed creatives, and they are still empty.</li>
-  </ul>
-  <p class="closing">The biggest lesson: a competitor's landing page is the cheapest user research you will ever run. They paid for the test. The only cost is looking one click past the ad.</p>
+<h2>7. What we would tell another product team</h2>
+<ul class="takeaways">
+<li><b>Read the destination, not the creative.</b> A hook tells you what a competitor wants to be true. The landing page it still pays for tells you what turned out to be true. In this category the gap is 92% of tested pages.</li>
+<li><b>Treat a competitor's dead funnel as a finished experiment.</b> Perplexity ran roughly 60 verticals and kept two. sintra ran seven industry pages and kept none. If a use case appears on both lists of the dead, it does not need your engineering time to be disproven.</li>
+<li><b>Sell a role or an artifact, not an industry.</b> "AI copywriter" and "bid-ready estimate" are live. "AI for restaurants" is dead at two brands. Narrow by the job someone is hired for, not by the building they work in.</li>
+<li><b>Name the tool the buyer already pays for.</b> The only sintra quizzes alive are /quiz-gpt and /quiz-claude. The generic quiz died. Meeting the buyer inside their current subscription beats asking them to pick a category.</li>
+<li><b>Open with finished work, not with AI.</b> Three of four brands now open with some version of "hands you a finished task." It is table stakes, which also means it no longer differentiates. The live hooks that do differentiate name a number ("$30,000", "200 listings, 12 showing") or a document ("bid-ready Excel estimate").</li>
+<li><b>Skip what the biggest spender has already stopped paying for.</b> Discounts, ChatGPT head-to-heads, creator landing pages, a second brand domain, live webinars. Every one of these was funded and dropped inside the last five months.</li>
+<li><b>Test the empty rows.</b> Nobody in the set leads with an approval step ("you review, you send"), a compliance standard, or the buyer's own AI bill on screen. Those are the gaps HookRadar's gap check found in 639 analysed creatives, and they are still empty.</li>
+</ul>
+<p class="closing">A competitor's landing page is the cheapest user research you will ever run. They paid for the test. The only cost is looking one click past the ad.</p>
+<div class="cta"><p><b>Want to see the funnels behind your competitors' ads?</b> HookRadar tracks paid creatives, their destinations and what stays live, across Meta and TikTok. <a href="https://hookradar.net">Start a free trial</a> or <a href="https://hookradar.net/blog">read more HookRadar reports</a>.</p></div>
 </div>
 
 <div class="wrap note">
-  <h3>Methodology and data notes</h3>
-  <p><b>Sources.</b> All competitor data is Meta Ad Library data as processed by HookRadar for the Speechify Work workspace: per-competitor destination summaries (180-day window ending September 21, 2026), the active-ad snapshot of September 21, ten weekly HookRadar AI Reports (June 29 to September 7), three brief packs (weeks of August 17, 24 and 31) and Hook Insights over 90 days. Cross-category comparisons use the same destination summaries for Speechify's other HookRadar workspaces (reading and TTS, dictation, language learning).</p>
-  <p><b>Coverage.</b> 18,183 ads across the four AI-agent brands, of which 2,839 have HookRadar AI analysis. Across all 15 tracked brands: roughly 75,000 ads, 10,200 analysed, 670 distinct destination URLs.</p>
-  <p><b>Definitions.</b> A "funnel" or "destination" is a distinct cleaned landing URL (query strings and /signin suffixes merged). "Live" or "still funded" means at least one ad pointing to that URL was active on September 21, 2026. Not live does not prove the page failed; it proves the brand stopped buying traffic to it in the observed window. Counts are numbers of ads, not spend. Impressions are EU-only, as reported by the Ad Library. HookRadar signal is a 0 to 10,000 creative-strength score, not an impression count. Thumbnails are HookRadar previews of the first frame or the static image.</p>
-  <p><b>Known artifacts.</b> Perplexity's destination list includes 8,962 ads to fb.me and 822 to instagram.com; an identical 8,962 fb.me count appears under an unrelated brand in another workspace, so these were excluded from funnel counts. Manus install videos carry no text, so their hooks come from HookRadar's AI descriptions. Hook Insights for this workspace are flagged low_sample for the 90-day window and were used for ranking examples only, not for counts. Lindy had no active ads between July 17 and August 19, so its earlier hooks are dated from weekly reports rather than the snapshot.</p>
-  <p><b>No internal Speechify data</b> appears in this report. All figures are observable from the public Ad Library through HookRadar.</p>
+<h3>Methodology and data notes</h3>
+<p><b>Sources.</b> All competitor data is Meta Ad Library data as processed by HookRadar for the Speechify Work workspace: per-competitor destination summaries (180-day window ending September 21, 2026), the active-ad snapshot of September 21, ten weekly HookRadar AI Reports (June 29 to September 7), three brief packs (weeks of August 17, 24 and 31) and Hook Insights over 90 days. Cross-category comparisons use the same destination summaries for Speechify's other HookRadar workspaces (reading and TTS, dictation, language learning).</p>
+<p><b>Coverage.</b> 18,183 ads across the four AI-agent brands, of which 2,839 have HookRadar AI analysis. Across all 15 tracked brands: roughly 75,000 ads, 10,200 analysed, 670 distinct destination URLs.</p>
+<p><b>Definitions.</b> A "funnel" or "destination" is a distinct cleaned landing URL (query strings and /signin suffixes merged). "Live" or "still funded" means at least one ad pointing to that URL was active on September 21, 2026. Not live does not prove the page failed; it proves the brand stopped buying traffic to it in the observed window. Counts are numbers of ads, not spend. Impressions are EU-only, as reported by the Ad Library. HookRadar signal is a 0 to 10,000 creative-strength score, not an impression count. Thumbnails are HookRadar previews of the first frame or the static image.</p>
+<p><b>Known artifacts.</b> Perplexity's destination list includes 8,962 ads to fb.me and 822 to instagram.com; an identical 8,962 fb.me count appears under an unrelated brand in another workspace, so these were excluded from funnel counts. Manus install videos carry no text, so their hooks come from HookRadar's AI descriptions. Hook Insights for this workspace are flagged low_sample for the 90-day window and were used for ranking examples only, not for counts. Lindy had no active ads between July 17 and August 19, so its earlier hooks are dated from weekly reports rather than the snapshot.</p>
+<p><b>No internal Speechify data</b> appears in this case study. Which hypotheses we dropped and how our own funnels perform stays under NDA. All figures here are observable from the public Ad Library through HookRadar.</p>
 </div>
 </body></html>
